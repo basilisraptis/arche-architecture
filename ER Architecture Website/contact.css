@@ -1,0 +1,207 @@
+/* =========================
+   CONTACT PAGE
+========================= */
+.nav {
+  padding-bottom: 10px;
+  background: #1a0c00;
+  border-bottom: 1px solid #222;
+}
+.contact-page  .nav {
+  color: #000000;
+}
+
+.contact-page  .nav a,
+.contact-page  .nav a:visited {
+  color: #ffffff;
+}
+
+.contact-page  .lang-switch a {
+  color: #ffffff;
+}
+
+.contact-page .nav {
+  color: #ffffff;
+}
+
+b {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+b:visited {
+  color: #ffffff;
+}
+
+.contact-page {
+  background: #f7f3ee;
+  color: #111;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: start;
+}
+
+.contact-text {
+  padding: 100px 80px;
+}
+
+.contact-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+.contact-intro {
+  font-size: clamp(14px, 2.5vw, 16px);
+  max-width: 420px;
+  margin-bottom: 64px;
+}
+
+.contact-locations {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 64px;
+}
+
+.location h3 {
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.location p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.phone {
+  margin-top: 12px;
+}
+
+.contact-email a {
+  font-size: 14px;
+  color: #111;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,0.4);
+  padding-bottom: 4px;
+}
+
+/* Right image */
+
+
+.contact-image {
+  background-image: url("images/process06.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  min-height: 40vh;
+}
+
+
+/* ======================================
+   Footer
+====================================== */
+
+
+
+.footer-content {
+  text-align: center;
+  padding: 32px 16px; /* controls height */
+}
+
+/* Typography */
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  letter-spacing: 0.14em;
+  margin: 0;
+}
+
+.footer-slogan {
+  font-family: 'Playfair Display', serif;
+  font-size: 10px;
+    letter-spacing: 0.08em;
+  margin: 8px 0 4px;
+}
+
+.footer-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  margin: 0;
+
+}
+
+.lang-switch {
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+}
+
+.lang-switch a {
+
+  opacity: 0.5;
+  transition: opacity 0.25s ease;
+}
+
+.lang-switch a.active {
+  opacity: 1;
+  font-weight: 600;
+}
+
+
+/* Meta line below */
+
+.footer-meta a:hover {
+  opacity: 0.6;
+}
+
+.instagram-icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+footer-bar {
+  width: 100vw;
+  background: #1a0c00;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-meta {
+  background: #1a0c00;
+  color: #9a9a9a;
+  font-size: 11px;
+  padding: 12px 16px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+
+
+/* Mobile */
+@media (max-width: 900px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-image {
+    height: 50vh;
+  }
+
+  .contact-text {
+    padding: 64px 32px;
+  }
+
+}

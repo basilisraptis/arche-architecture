@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Έργα – ARCHĒ Architecture and Project Consulting</title>
+
+<link rel="stylesheet" href="../projects.css" />
+<link rel="stylesheet" href="../styles.css" />
+
+<script>
+const savedLang = localStorage.getItem("lang");
+const isGreek = location.pathname.startsWith("/gr");
+
+if (savedLang === "en" && isGreek) {
+  window.location.href = location.origin + "/projects.html";
+}
+
+if (!savedLang) {
+  const userLang = navigator.language || navigator.userLanguage;
+  if (userLang.startsWith("el") && !isGreek) {
+    window.location.href = location.origin + "/gr/projects.html";
+  }
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<nav class="nav">
+<div class="nav-left">☰</div>
+<a href="index.html" class="nav-center">ARCHĒ</a>
+
+<div class="nav-right">
+<a href="projects.html" class="nav-projects">Έργα</a>
+
+<div class="lang-switch">
+<a href="../projects.html" data-lang="en" onclick="localStorage.setItem('lang','en')">EN</a>
+<span>|</span>
+<a href="projects.html" data-lang="gr" onclick="localStorage.setItem('lang','gr')">GR</a>
+</div>
+</div>
+</nav>
+
+<header class="hero">
+<div class="hero-content">
+<h1>Έργα</h1>
+</div>
+</header>
+
+<footer class="footer">
+
+<div class="footer-bar">
+<div class="footer-content">
+<h1 class="footer-logo">ARCHĒ</h1>
+
+<p class="footer-slogan">
+ARCHITECTURE AND PROJECT CONSULTING
+</p>
+
+<p class="footer-subtitle">
+FROM CONCEPT TO CONSTRUCTION
+</p>
+</div>
+</div>
+
+<div class="footer-meta">
+<span>© 2026 ARCHĒ, Larissa, GR · Munich, DE</span>
+<span> · </span>
+<a href="mailto:info@arche-consulting.com">
+info@arche-consulting.com
+</a>
+
+<a href="https://www.instagram.com/arche.consulting"
+target="_blank"
+aria-label="
