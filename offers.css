@@ -1,0 +1,130 @@
+/* =========================
+   PROJECTS PAGE NAV (dark on light)
+========================= */
+.projects-page .nav {
+  background: #1a0c00;
+
+}
+
+.projects-page .nav,
+.projects-page .nav a,
+.projects-page .nav a:visited,
+.projects-page .lang-switch,
+.projects-page .lang-switch a,
+.projects-page .lang-switch span {
+  color: #ffffff;
+}
+
+
+/* ======================================
+   HERO (same behaviour as other pages)
+====================================== */
+
+.projects-page .hero {
+  min-height: 60vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-image: url("images/process01.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.projects-page .hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+}
+
+.projects-page .hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* ======================================
+   PROJECTS GRID
+====================================== */
+
+.projects-section {
+  background: #f7f3ee;
+  padding: clamp(60px, 10vh, 120px) clamp(24px, 6vw, 80px);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+}
+
+
+/* PROJECT CARD */
+
+.project-card {
+  display: block;
+  color: #2b2622;
+}
+
+.project-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+.project-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.project-meta {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: #7a746e;
+}
+
+.footer-bar {
+  width: 100vw;
+  background: #1a0c00;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-meta {
+  background: #1a0c00;
+  color: #9a9a9a;
+  font-size: 11px;
+  padding: 12px 16px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* ======================================
+   RESPONSIVE
+====================================== */
+
+@media (max-width: 900px) {
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+}

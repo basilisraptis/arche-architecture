@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact – ARCHĒ Architecture and Project Consulting</title>
+<meta charset="UTF-8" />
+
+
+<link rel="stylesheet" href="inquires.css">
+<link rel="stylesheet" href="contact.css" />
+<link rel="stylesheet" href="styles.css" />
+
+<script>
+const savedLang = localStorage.getItem("lang");
+const isGreek = location.pathname.startsWith("/gr");
+
+if (savedLang === "gr" && !isGreek) {
+  location.href = "/gr/contact.html";
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body class="contact-page">
+
+<nav class="nav">
+<div class="nav-left">☰</div>
+
+<a href="/index.html" class="nav-center">ARCHĒ</a>
+
+<div class="nav-right">
+
+<div class="lang-switch">
+<a href="/contact.html" onclick="localStorage.setItem('lang','en')">EN</a>
+<span>|</span>
+<a href="/gr/contact.html" onclick="localStorage.setItem('lang','gr')">GR</a>
+</div>
+
+</div>
+</nav>
+
+  <!-- Contact Content -->
+  <main>
+
+  <!-- CONTACT SECTION (2 columns) -->
+  <section class="contact-layout">
+
+    <section class="contact-text">
+      <h1>Connect with us</h1>
+      <p class="contact-intro">
+        Have a question or interested in starting a project, we’d love to hear from you.
+      </p>
+
+      <div class="contact-locations">
+        <div class="location">
+          <h3>Larissa, Greece</h3>
+          <p>Example Street 12<br>10115 Berlin, Germany</p>
+          <p class="phone">+30 69 1234 5678</p>
+        </div>
+
+        <div class="location">
+          <h3>Munich, Germany</h3>
+          <p>Sampleallee 8<br>80331 Munich, Germany</p>
+          <p class="phone">+49 89 9876 5432</p>
+        </div>
+      </div>
+
+      <div class="contact-email">
+        <p>For general enquiries:</p>
+        <a href="mailto:info@arche-architecture.com">info@arche-architecture.com</a>
+      </div>
+    </section>
+
+    <section class="contact-image"></section>
+
+  </section>
+
+  <!-- INQUIRIES (FULL WIDTH, NEW SECTION) -->
+  <section class="inquiries-section">
+
+    <h1>New Project Inquiries</h1>
+    
+
+  
+    <p class="subtitle">
+      Email <a href="mailto:businessdevelopment@bamo.com">
+      businessdevelopment@arche-architecture.com</a>
+      or complete the form below and we’ll be in touch.
+    </p>
+
+    <form class="inquiries-grid">
+
+      <div class="field">
+        <label>NAME</label>
+        <input type="text" placeholder="First Name & Last">
+      </div>
+
+      <div class="field">
+        <label>COMPANY NAME</label>
+        <input type="text" placeholder="Name">
+      </div>
+
+      <div class="field">
+        <label>EMAIL</label>
+        <input type="email" placeholder="Enter Email">
+      </div>
+
+      <div class="field">
+        <label>PHONE</label>
+        <input type="tel" placeholder="Enter Phone Number">
+      </div>
+
+      <div class="field">
+        <label>PROJECT TYPE</label>
+        <input type="text" placeholder="Choose One">
+      </div>
+
+      <div class="field">
+        <label>LOCATION</label>
+        <input type="text" placeholder="Enter Location">
+      </div>
+
+      <div class="field full">
+        <label>PROJECT DETAILS</label>
+        <textarea placeholder="Tell us more about the project (Vision, Scope/Program & Schedule)"></textarea>
+      </div>
+
+      <div class="field">
+        <label>REFERRAL SOURCE</label>
+        <input type="text" placeholder="How did you hear about us?">
+      </div>
+
+      <div class="field">
+        <label>ADDITIONAL INFORMATION</label>
+        <div class="upload-box">
+          Drop files here or<br>
+          <strong>SELECT FILES</strong>
+        </div>
+      </div>
+
+    <div class="form-submit">
+    <button type="submit">Submit inquiry</button>
+    </div>
+
+    </form>
+
+  </section>
+
+</main>
+
+<footer class="footer">
+
+  <div class="footer-bar">
+    <div class="footer-content">
+      <h1 class="footer-logo">ARCHĒ</h1>
+
+      <p class="footer-slogan">
+        ARCHITECTURE AND PROJECT CONSULTING  
+      </p>
+
+      <p class="footer-subtitle">
+        FROM CONCEPT TO CONSTRUCTION
+      </p>
+    </div>
+  </div>
+
+  <div class="footer-meta">
+    <span>© 2026 ARCHĒ, Larissa, GR · Munich, DE</span>
+    <span>  ·   </span>
+    <a href="mailto:info@arche-consulting.com">
+      info@arche-consulting.com
+    </a>
+
+    <a
+      href="https://www.instagram.com/arche.consulting"
+      target="_blank"
+      aria-label="ARCHĒ on Instagram"
+      class="instagram-icon"
+    >
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+        <rect x="3" y="3" width="18" height="18" rx="4"
+              stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="12" cy="12" r="4"
+                stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="17" cy="7" r="1" fill="currentColor"/>
+      </svg>
+    </a>
+  </div>
+
+</footer>
+  <!-- Menu Overlay -->
+  <div class="menu-overlay" id="menu">
+    <div class="menu-close" id="closeMenu">✕</div>
+
+<ul class="menu-items">
+  <li><a href="projects.html">Projects</a></li>
+  <li><a href="process.html">Our Process</a></li>
+  <li><a href="studio.html">Our Studio</a></li>
+  <li><a href="offers.html">Real Estate Listings</a></li>
+  <li><a href="contact.html">Connect</a></li>
+</ul>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+
+
+

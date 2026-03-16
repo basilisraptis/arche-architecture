@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ARCHĒ Architecture and Project Consulting</title>
+
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="projects.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<script>
+const savedLang = localStorage.getItem("lang");
+const path = window.location.pathname;
+
+if (savedLang === "gr" && !path.startsWith("/gr")) {
+  window.location.href = "/gr/";
+}
+
+if (!savedLang) {
+  const userLang = navigator.language || navigator.userLanguage;
+
+  if (userLang.startsWith("el")) {
+    localStorage.setItem("lang", "gr");
+    window.location.href = "/gr/";
+  } else {
+    localStorage.setItem("lang", "en");
+  }
+}
+</script>
+
+</head>
+
+<body class="projects-page">
+
+<!-- Navigation -->
+<nav class="nav">
+
+<div class="nav-left">☰</div>
+
+<a href="index.html" class="nav-center">ARCHĒ</a>
+
+<div class="nav-right">
+
+
+<div class="lang-switch">
+<a href="/" onclick="localStorage.setItem('lang','en')">EN</a>
+<span>|</span>
+<a href="/gr/" onclick="localStorage.setItem('lang','gr')">GR</a>
+</div>
+
+</div>
+
+</nav>
+
+
+<main>
+
+<section class="projects-section">
+
+ <section class="projects-intro">
+
+<div class="projects-intro-inner">
+
+<h1>Selected Projects</h1>
+
+<p>
+A selection of recent architectural work exploring spatial clarity,
+material expression, and contextual integration.
+</p>
+
+</div>
+
+</section>
+
+<!-- PROJECT 1 -->
+<div class="project-block">
+
+<h2 class="project-name">Project One</h2>
+<p class="project-meta">Residential · Munich · 2024</p>
+
+<div class="project-carousel">
+
+<button class="carousel-arrow left">←</button>
+
+<div class="carousel-viewport">
+<div class="carousel-track">
+
+<img src="images/process01.jpg" alt="">
+<img src="images/process02.jpg" alt="">
+<img src="images/process03.jpg" alt="">
+<img src="images/process04.jpg" alt="">
+<img src="images/process05.jpg" alt="">
+<img src="images/process06.jpg" alt="">
+<img src="images/process07.jpg" alt="">
+
+</div>
+</div>
+
+<button class="carousel-arrow right">→</button>
+
+</div>
+
+</div>
+
+
+
+<!-- PROJECT 2 -->
+<div class="project-block">
+
+<h2 class="project-name">Project Two</h2>
+<p class="project-meta">Residential · Munich · 2024</p>
+
+<div class="project-carousel">
+
+<button class="carousel-arrow left">←</button>
+
+<div class="carousel-viewport">
+<div class="carousel-track">
+
+<img src="images/process01.jpg" alt="">
+<img src="images/process02.jpg" alt="">
+<img src="images/process03.jpg" alt="">
+<img src="images/process04.jpg" alt="">
+<img src="images/process05.jpg" alt="">
+<img src="images/process06.jpg" alt="">
+<img src="images/process07.jpg" alt="">
+
+</div>
+</div>
+
+<button class="carousel-arrow right">→</button>
+
+</div>
+
+</div>
+
+
+
+<!-- PROJECT 3 -->
+<div class="project-block">
+
+<h2 class="project-name">Project Three</h2>
+<p class="project-meta">Residential · Munich · 2024</p>
+
+<div class="project-carousel">
+
+<button class="carousel-arrow left">←</button>
+
+<div class="carousel-viewport">
+<div class="carousel-track">
+
+<img src="images/process01.jpg" alt="">
+<img src="images/process02.jpg" alt="">
+<img src="images/process03.jpg" alt="">
+<img src="images/process04.jpg" alt="">
+<img src="images/process05.jpg" alt="">
+<img src="images/process06.jpg" alt="">
+<img src="images/process07.jpg" alt="">
+
+</div>
+</div>
+
+<button class="carousel-arrow right">→</button>
+
+</div>
+
+</div>
+
+
+
+<!-- PROJECT 4 -->
+<div class="project-block">
+
+<h2 class="project-name">Project Four</h2>
+<p class="project-meta">Residential · Munich · 2024</p>
+
+<div class="project-carousel">
+
+<button class="carousel-arrow left">←</button>
+
+<div class="carousel-viewport">
+<div class="carousel-track">
+
+<img src="images/process01.jpg" alt="">
+<img src="images/process02.jpg" alt="">
+<img src="images/process03.jpg" alt="">
+<img src="images/process04.jpg" alt="">
+<img src="images/process05.jpg" alt="">
+<img src="images/process06.jpg" alt="">
+<img src="images/process07.jpg" alt="">
+
+</div>
+</div>
+
+<button class="carousel-arrow right">→</button>
+
+</div>
+
+</div>
+
+
+
+<!-- PROJECT 5 -->
+<div class="project-block">
+
+<h2 class="project-name">Project Five</h2>
+<p class="project-meta">Residential · Munich · 2024</p>
+
+<div class="project-carousel">
+
+<button class="carousel-arrow left">←</button>
+
+<div class="carousel-viewport">
+<div class="carousel-track">
+
+<img src="images/process01.jpg" alt="">
+<img src="images/process02.jpg" alt="">
+<img src="images/process03.jpg" alt="">
+<img src="images/process04.jpg" alt="">
+<img src="images/process05.jpg" alt="">
+<img src="images/process06.jpg" alt="">
+<img src="images/process07.jpg" alt="">
+
+</div>
+</div>
+
+<button class="carousel-arrow right">→</button>
+
+</div>
+
+</div>
+
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+<div class="footer-bar">
+<div class="footer-content">
+
+<h1 class="footer-logo">ARCHĒ</h1>
+
+<p class="footer-slogan">
+ARCHITECTURE AND PROJECT CONSULTING
+</p>
+
+<p class="footer-subtitle">
+FROM CONCEPT TO CONSTRUCTION
+</p>
+
+</div>
+</div>
+
+<div class="footer-meta">
+
+<span>© 2026 ARCHĒ, Larissa, GR · Munich, DE</span>
+
+<span> · </span>
+
+<a href="mailto:info@arche-consulting.com">
+info@arche-consulting.com
+</a>
+
+<a href="https://www.instagram.com/arche.consulting"
+target="_blank"
+aria-label="ARCHĒ on Instagram"
+class="instagram-icon">
+
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+<rect x="3" y="3" width="18" height="18" rx="4"
+stroke="currentColor" stroke-width="1.5"/>
+<circle cx="12" cy="12" r="4"
+stroke="currentColor" stroke-width="1.5"/>
+<circle cx="17" cy="7" r="1" fill="currentColor"/>
+</svg>
+
+</a>
+
+</div>
+
+</footer>
+
+
+
+<!-- MENU OVERLAY -->
+<div class="menu-overlay" id="menu">
+
+<div class="menu-close" id="closeMenu">✕</div>
+
+<ul class="menu-items">
+<li><a href="projects.html">Projects</a></li>
+<li><a href="process.html">Our Process</a></li>
+<li><a href="studio.html">Our Studio</a></li>
+<li><a href="offers.html">Real Estate Listings</a></li>
+<li><a href="contact.html">Connect</a></li>
+</ul>
+
+</div>
+
+
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+<span class="lightbox-close" id="lightboxClose">✕</span>
+<img id="lightboxImg">
+</div>
+
+
+<script src="script.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+const lang = localStorage.getItem("lang");
+
+if (lang === "gr") {
+document.querySelector('[onclick*="gr"]')?.classList.add("active");
+} else {
+document.querySelector('[onclick*="en"]')?.classList.add("active");
+}
+
+});
+</script>
+
+</body>
+</html>
