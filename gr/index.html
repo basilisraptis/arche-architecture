@@ -4,27 +4,31 @@
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>ARCHĒ Architecture and Project Consulting</title>
+<title>Home Page – ARCHĒ Architecture and Project Consulting</title>
 
 <script>
 const savedLang = localStorage.getItem("lang");
-const isGreek = location.pathname.startsWith("/gr");
+const path = window.location.pathname;
 
-if (savedLang === "en" && isGreek) {
-  location.href = "/index.html";
+// redirect to Greek if user selected it
+if (savedLang === "gr" && !path.startsWith("/gr")) {
+  window.location.href = "/gr/";
 }
 
+// first visit → detect browser language
 if (!savedLang) {
   const userLang = navigator.language || navigator.userLanguage;
-  if (userLang.startsWith("el") && !isGreek) {
-    location.href = "/gr/index.html";
+  if (userLang.startsWith("el")) {
+    localStorage.setItem("lang", "gr");
+    window.location.href = "/gr/";
+  } else {
+    localStorage.setItem("lang", "en");
   }
 }
 </script>
 
-<link rel="stylesheet" href="../styles.css" />
+<link rel="stylesheet" href="/styles.css" />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
@@ -33,26 +37,21 @@ if (!savedLang) {
 
 <nav class="nav">
 
-  <div class="nav-left">☰</div>
+<div class="nav-left">☰</div>
 
-  <a href="index.html" class="nav-center">ARCHĒ</a>
+<div class="nav-center">ARCHĒ</div>
 
-  <div class="nav-right">
+<div class="nav-right">
 
-    <a href="projects.html" class="nav-projects">Έργα</a>
+<a href="projects.html" class="nav-projects">Έργα</a>
 
-    <div class="lang-switch">
-      <a href="/index.html"
-         data-lang="en"
-         onclick="localStorage.setItem('lang','en')">EN</a>
-      <span>|</span>
-      <a href="/gr/index.html"
-         data-lang="gr"
-         onclick="localStorage.setItem('lang','gr')">GR</a>
-    </div>
+<div class="lang-switch">
+<a href="/" onclick="localStorage.setItem('lang','en')">EN</a>
+<span>|</span>
+<a href="/gr/" onclick="localStorage.setItem('lang','gr')">GR</a>
+</div>
 
-  </div>
-
+</div>
 </nav>
 
 <div class="hero-content">
@@ -60,7 +59,7 @@ if (!savedLang) {
     Σχεδιάζοντας<br>
     εμπειρίες χώρου
   </h1>
-  <a href="contact.html" class="cta">Έναρξη συνεργασίας</a>
+<a href="contact.html" class="cta">Έναρξη συνεργασίας</a>
 </div>
 
 </header>
@@ -106,6 +105,7 @@ if (!savedLang) {
 
 </footer>
 
+<!-- Menu Overlay -->
 <div class="menu-overlay" id="menu">
   <div class="menu-close" id="closeMenu">✕</div>
 
@@ -118,7 +118,19 @@ if (!savedLang) {
   </ul>
 </div>
 
-<script src="../script.js"></script>
+<script src="/script.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+const lang = localStorage.getItem("lang");
+
+if (lang === "gr") {
+document.querySelector('[onclick*="gr"]')?.classList.add("active");
+} else {
+document.querySelector('[onclick*="en"]')?.classList.add("active");
+}
+});
+</script>
 
 </body>
 </html>
